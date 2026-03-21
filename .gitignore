@@ -1,0 +1,68 @@
+# =========================
+# .NET / Visual Studio
+# =========================
+
+bin/
+obj/
+out/
+
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VSCode
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# =========================
+# NuGet
+# =========================
+
+*.nupkg
+packages/
+.nuget/
+
+# =========================
+# Build
+# =========================
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+publish/
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+appsettings.Development.json
+appsettings.Local.json
+
+# =========================
+# Test results
+# =========================
+
+TestResults/
+coverage/
+
+# =========================
+# Otros
+# =========================
+
+*.cache
+*.tmp
