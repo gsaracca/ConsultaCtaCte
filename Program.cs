@@ -1,8 +1,20 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+
+var config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", true)
+    .AddEnvironmentVariables()
+    .Build();
 
 // --- Configuración ---
 // Ajustá estos valores a tu entorno
-string connectionString = "";
+string connectionString = config.GetSection("ConnectionStrings")["Default"];
+
+if (string.IsNullOrEmpty(connectionString))
+{
+    Console.WriteLine("Error: No se pudo cargar la cadena de conexión desde appsettings.json");
+    return;
+}
 
 // --- Validar parámetro ---
 if (args.Length == 0 || !int.TryParse(args[0], out int legajo))
