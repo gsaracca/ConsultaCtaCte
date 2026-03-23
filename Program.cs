@@ -8,7 +8,7 @@ var config = new ConfigurationBuilder()
 
 // --- Configuración ---
 // Ajustá estos valores a tu entorno
-string connectionString = config.GetSection("ConnectionStrings")["Default"];
+string? connectionString = config.GetConnectionString("Default");
 
 if (string.IsNullOrEmpty(connectionString))
 {
@@ -57,7 +57,7 @@ try
 
     if (!reader.HasRows)
     {
-        Console.WriteLine($"No se encontraron registros para el legajo {legajo}.");
+        Console.WriteLine( $"No se encontraron registros para el legajo {legajo}." );
         return;
     }
 
