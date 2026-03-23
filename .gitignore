@@ -9,6 +9,9 @@ obj/
 *.userosscache
 *.sln.docstates
 
+# App settings with real credentials
+appsettings.json
+
 # User secrets
 secrets.json
 
